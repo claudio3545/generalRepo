@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+<!----------Functions------------------>
+function alertOnButtonMouseOver(){
+    alert("Why did you hover over me?");
+}
+function displayName(x){
+    alert("hello " + x)
+}
+
+function multipleParameters(first,second){
+    document.write(first + " is always before " + second);
+}
+
+function addNumber(a,b){
+    var c = a + b;
+    return c;
+}
+
+<!----------Calling functions---------->
+displayName("Claudio");
+
+multipleParameters("Claudio","Acciani");
+
+document.write(addNumber(3,100));
+</script>
+<form>
+    <input type="button" value="Don't even try me" onmouseover="alertOnButtonMouseOver()">
+
+    <input type="text" placeholder="value 1">
+    <input type="text" placeholder="value 2">
+    <
+    <input type="button" value="add 2 numbers" onclick="addNumber()">
+    <textarea value="result" o></textarea>
+
+
+</form>
+</body>
+</html>
