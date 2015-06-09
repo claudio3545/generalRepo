@@ -21,6 +21,16 @@
        $scope.squirtle = function() {
               $scope.pokemon = 'squirtle';
           };
-    }]);
+    }])
+
+    .controller('MainCtrl', function ($scope){
+      $scope.message = 'hello';
+
+      $scope.updateMessage = function(message){
+        $scope.message = message;
+      };
+    });
+
+
 
 })();

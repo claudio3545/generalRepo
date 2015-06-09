@@ -2,16 +2,18 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Testing AngularBasics</title>
     <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
 
 </head>
-<body ng-app="app">
+<body ng-app="app" >
 <div>
     <input type="text" ng-model="defaultMovie">
 
     <div>
-        <h1>Default  movie is: {{ defaultMovie }}</h1>
+
+        <h1> This is some sig content!  <small> {{ defaultMovie }}</small></h1>
     </div>
     <div ng-controller="MovieListSpecCTRL as list">
         <b>Movies:</b>
@@ -22,8 +24,7 @@
     </div>
 </div>
 
-<div>
-
+<div >
     <div ng-controller="GreetingController">
         {{ greeting }}
     </div>
@@ -37,9 +38,28 @@
         <button ng-click="squirtle()">squirtle</button>
         <p>I chose you ! {{ pokemon}} !</p>
     </div>
+
+
+    <div ng-controller="MainCtrl">
+        <p>{{ message }}</p>
+        <form ng-submit="updateMessage(newMessage)">
+            <input type="text" ng-model="newMessage">
+            <button type="submit">Update Message</button>
+        </form>
+    </div>
+</div>
+<div ng-controller="movieListController">
+    <p>In this section we will use a service. The service will display a list of movies </p>
+    <tr ng-repeat="movieListController as list" >
+    <td>{{list.title}} </td>
+
+    </tr>
 </div>
 
+
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="jquery-1.11.3.min.js"></script>
 <script src="modules/movies.js"></script>
 <script src="modules/examples.js"></script>
 <script src="modules/app.js"></script>
