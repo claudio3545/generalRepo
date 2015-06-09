@@ -1,5 +1,8 @@
-var moviesApp = angular.module('moviesApp',[])
-moviesApp.controller('MovieListSpecCTRL',function(){
+(function() {
+    'use strict';
+
+angular.module('moviesApp',[])
+.controller('MovieListSpecCTRL',function(){
                 this.list = 'MovieList';
                 this.ownerFirstName = 'Claudio';
                 this.ownerLastName = 'Acciani';
@@ -11,8 +14,8 @@ moviesApp.controller('MovieListSpecCTRL',function(){
                 
                         
             }
-        );
-moviesApp.controller('ListMovieDetails',function(){
+        )
+.controller('ListMovieDetails',function(){
                         this.title = '';
                         this.year ='';
                         this.plot ='';
@@ -23,5 +26,7 @@ moviesApp.controller('ListMovieDetails',function(){
 
                     }
         );
+
+})();
 
 
