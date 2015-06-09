@@ -24,22 +24,4 @@ moviesApp.controller('ListMovieDetails',function(){
                     }
         );
 
-moviesApp.controller('GreetingController', ['$scope', function($scope) {
-  $scope.greeting = 'Hola!';
-}]);
-
-moviesApp.controller('DoubleController', ['$scope', function($scope) {
-  $scope.double = function(value) { return value * 2; };
-}]);
-
-moviesApp.controller('scopeTest', ['$scope', function($scope) {
-  $scope.pokemon = 'bulbasour';
-
-   $scope.pikatchu = function() {
-          $scope.pokemon = 'pikatchu';
-      };
-   $scope.squirtle = function() {
-          $scope.pokemon = 'squirtle';
-      };
-}]);
 

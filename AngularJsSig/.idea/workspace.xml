@@ -30,8 +30,8 @@
           <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Sig Meet 1/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.41034484" vertical-offset="0" max-vertical-offset="870">
-                  <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+                <state vertical-scroll-proportion="0.5862069" vertical-offset="0" max-vertical-offset="870">
+                  <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
                   <folding />
                 </state>
               </provider>
@@ -41,8 +41,18 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="movies.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="movies.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Sig Meet 1/modules/movies.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+                  <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="examples.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Sig Meet 1/modules/examples.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.47433037" vertical-offset="0" max-vertical-offset="896">
                   <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
@@ -63,7 +73,9 @@
         <option value="$PROJECT_DIR$/Sig Meet 1/test.html" />
         <option value="$PROJECT_DIR$/Sig Meet 1/modules/app.js" />
         <option value="$PROJECT_DIR$/Sig Meet 1/modules/movies.js" />
+        <option value="$PROJECT_DIR$/Sig Meet 1/modules/examles.js" />
         <option value="$PROJECT_DIR$/Sig Meet 1/index.html" />
+        <option value="$PROJECT_DIR$/Sig Meet 1/modules/examples.js" />
       </list>
     </option>
   </component>
@@ -161,6 +173,7 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="FullScreen" value="false" />
+    <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -436,6 +449,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Sig Meet 1/modules/movies.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sig Meet 1/modules/examples.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.47433037" vertical-offset="0" max-vertical-offset="896">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
@@ -444,8 +465,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Sig Meet 1/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41034484" vertical-offset="0" max-vertical-offset="870">
-          <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.5862069" vertical-offset="0" max-vertical-offset="870">
+          <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
           <folding />
         </state>
       </provider>
