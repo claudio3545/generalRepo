@@ -1,8 +1,16 @@
 (function() {
     'use strict';
 
-   angular.module('exampleModule',[])
+angular.module('MovieModule',[])
+.factory('messages', function(){
+  var messages = {};
 
-   .factory('')
+  messages.list = [];
 
+  messages.add = function(message){
+    messages.list.push({id: messages.list.length, text: message});
+  };
+
+  return messages;
+});
 })();

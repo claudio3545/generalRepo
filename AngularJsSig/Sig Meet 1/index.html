@@ -4,41 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Testing AngularBasics</title>
-    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
 
 </head>
-<body ng-app="app" >
+<body ng-app="app" ng-strict-di>
 <div>
-    <input type="text" ng-model="defaultMovie">
-
+    <h2> Data binding </h2>
+    <p> databinding from input field to interface</p>
+    <input type="text" ng-model="bindingExample">
     <div>
-
-        <h1> This is some sig content!  <small> {{ defaultMovie }}</small></h1>
+        <p></p> This is some sig content! Don't you think! <small> {{ bindingExample }}</small></p>
     </div>
-    <div ng-controller="MovieListSpecCTRL as list">
-        <b>Movies:</b>
+    ----------------------------------------------------------------------
+
+    <div ng-controller="MovieListSpecCTRL as movieList">
+        <b>Binding from controller :</b>
 
         <div>
-            Owner : {{list.ownerFirstName}}
+            Owner : {{movieList.ownerFirstName }} {{movieList.ownerLastName}}
+        </div>
+        <div ng-controller="GreetingController">
+            {{ greeting }}
+        </div>
+
+        <div ng-controller="DoubleController">
+            Two times <input ng-model="num"> equals {{ double(num) }}
         </div>
     </div>
 </div>
+----------------------------------------------------------------------
 
 <div >
-    <div ng-controller="GreetingController">
-        {{ greeting }}
-    </div>
+    <h2> $Scope versus this</h2>
+    <p> good reads : http://toddmotto.com/digging-into-angulars-controller-as-syntax/ </p>
 
-    <div ng-controller="DoubleController">
-        Two times <input ng-model="num"> equals {{ double(num) }}
-    </div>
 
     <div ng-controller="scopeTest">
-        <button ng-click="pikatchu()">pikatchu</button>
-        <button ng-click="squirtle()">squirtle</button>
-        <p>I chose you ! {{ pokemon}} !</p>
+        <p> Example with scope binding</p>
+        <button ng-click="pikatchu()">PIKATCHU</button>
+        <button ng-click="squirtle()">SQUIRTLE</button>
+        <p>I chose you ! {{ default }} !</p>
     </div>
 
+    <div ng-controller="thisTest as test">
+        <p> Example with this binding</p>
+        <button ng-click="test.pikatchu()">PIKATCHU!</button>
+        <button ng-click="test.squirtle()">SQUIRTLE!</button>
+        <p>I chose you ! {{ test.default}} !</p>
+    </div>
+
+
+ ----------------------------------------------------------------------
+<h3> Controller exammple with form post. </h3>
 
     <div ng-controller="MainCtrl">
         <p>{{ message }}</p>
@@ -48,20 +64,39 @@
         </form>
     </div>
 </div>
-<div ng-controller="movieListController">
-    <p>In this section we will use a service. The service will display a list of movies </p>
-    <tr ng-repeat="movieListController as list" >
-    <td>{{list.title}} </td>
+--------------------------------------------------------------------------------
 
-    </tr>
+<!--<div ng-controller="movieListController">-->
+    <!--<p>In this section we will use a service. The service will display a list of movies </p>-->
+    <!--<tr ng-repeat="movieListController as list" >-->
+    <!--<td>{{list.title}} </td>-->
+
+    <!--</tr>-->
+<!--</div>-->
+--------------------------------------------------------------------------------
+
+<div >
+    <div >
+        <h3>Services </h3>
+        <div ng-controller="ListCtrl as list">
+            <p ng-repeat="message in list.messages">{{ message.id }}: {{ message.text }}</p>
+        </div>
+        <div ng-controller="PostCtrl as post">
+            <form ng-submit="post.addMessage(post.newMessage)">
+                <input type="text" ng-model="post.newMessage">
+                <button type="submit">Add Message</button>
+            </form>
+        </div>
+
+    </div>
 </div>
 
-
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script src="jquery-1.11.3.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
 <script src="modules/movies.js"></script>
 <script src="modules/examples.js"></script>
+<script src="services/movieService.js"></script>
 <script src="modules/app.js"></script>
 </body>
 </html>
