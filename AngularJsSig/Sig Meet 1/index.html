@@ -37,8 +37,9 @@
 
 <div >
     <h2> $Scope versus this</h2>
-    <p> good reads : http://toddmotto.com/digging-into-angulars-controller-as-syntax/ </p>
-
+  <!--
+    *good reads : http://toddmotto.com/digging-into-angulars-controller-as-syntax/
+    -->
 
     <div ng-controller="scopeTest">
         <p> Example with scope binding</p>
@@ -53,10 +54,27 @@
         <button ng-click="test.squirtle()">SQUIRTLE!</button>
         <p>I chose you ! {{ test.pokemon}} !</p>
     </div>
+    <h2> Nested scopes </h2>
+    <div>
+
+        <div ng-controller="MainController">
+            <p>Good {{timeOfDay}}, {{name}}!</p>
+
+            <div ng-controller="ChildController">
+                <p>Good {{timeOfDay}}, {{name}}!</p>
+
+                <div ng-controller="GrandChildController">
+                    <p>Good {{timeOfDay}}, {{name}}!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
 
 
  ----------------------------------------------------------------------
-<h3> Controller exammple with form post. </h3>
+<h2> Controller example with form post  </h2>
 
     <div ng-controller="MainCtrl">
         <p>{{ message }}</p>
@@ -75,11 +93,10 @@
 
     <!--</tr>-->
 <!--</div>-->
---------------------------------------------------------------------------------
 
 <div >
     <div >
-        <h3>Services </h3>
+        <h2>Services </h2>
         <div ng-controller="ListCtrl as list">
             <p ng-repeat="message in list.messages">{{ message.id }}: {{ message.text }}</p>
         </div>
