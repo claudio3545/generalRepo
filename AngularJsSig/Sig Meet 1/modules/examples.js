@@ -13,7 +13,7 @@
     }])
 
     .controller('scopeTest', ['$scope', function($scope) {
-      $scope.default = 'bulbasour';
+      $scope.pokemon = 'bulbasour';
 
        $scope.pikatchu = function() {
               $scope.pokemon = 'pikatchu';
@@ -24,7 +24,7 @@
     }])
 
     .controller('thisTest',function() {
-          this.default = 'bulbasour';
+          this.pokemon = 'bulbasour';
 
            this.pikatchu = function() {
                   this.pokemon = 'pikatchu';
@@ -34,13 +34,13 @@
               };
         })
 
-    .controller('MainCtrl', function ($scope){
+    .controller('MainCtrl', ['$scope',function ($scope){
       $scope.message = 'hello';
 
       $scope.updateMessage = function(message){
         $scope.message = message;
       };
-    });
+    }]);
 
 
 

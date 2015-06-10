@@ -22,7 +22,9 @@
         <div>
             Owner : {{movieList.ownerFirstName }} {{movieList.ownerLastName}}
         </div>
-        <div ng-controller="GreetingController">
+        <div ng-controller="GreetingController" ng-cloak>
+            <p ng-bind=" ' test ' + greeting"></p>
+
             {{ greeting }}
         </div>
 
@@ -42,14 +44,14 @@
         <p> Example with scope binding</p>
         <button ng-click="pikatchu()">PIKATCHU</button>
         <button ng-click="squirtle()">SQUIRTLE</button>
-        <p>I chose you ! {{ default }} !</p>
+        <p>I chose you ! {{ pokemon }} !</p>
     </div>
 
     <div ng-controller="thisTest as test">
         <p> Example with this binding</p>
         <button ng-click="test.pikatchu()">PIKATCHU!</button>
         <button ng-click="test.squirtle()">SQUIRTLE!</button>
-        <p>I chose you ! {{ test.default}} !</p>
+        <p>I chose you ! {{ test.pokemon}} !</p>
     </div>
 
 
@@ -98,5 +100,6 @@
 <script src="modules/examples.js"></script>
 <script src="services/movieService.js"></script>
 <script src="modules/app.js"></script>
+
 </body>
 </html>

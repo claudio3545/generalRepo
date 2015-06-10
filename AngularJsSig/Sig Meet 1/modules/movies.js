@@ -37,13 +37,13 @@ angular.module('moviesApp',[])
         )
 
 
-.controller('ListCtrl', function (messages){
+.controller('ListCtrl',['messages', function (messages){
   var self = this;
 
   self.messages = messages.list;
-})
+}])
 
-.controller('PostCtrl', function (messages){
+.controller('PostCtrl',['messages', function (messages){
   var self = this;
   self.newMessage = 'Hello World!';
 
@@ -51,7 +51,7 @@ angular.module('moviesApp',[])
     messages.add(message);
     self.newMessage = '';
   };
-});
+}]);
 
 
 })();
